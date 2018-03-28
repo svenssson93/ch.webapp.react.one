@@ -8,4 +8,4 @@ const environment = {
   trainsLocationDashboard: 'Berlin'
 };
 
-export default environment
+export default environment;
