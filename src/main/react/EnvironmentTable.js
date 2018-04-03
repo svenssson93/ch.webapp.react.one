@@ -2,19 +2,19 @@ import React, { Component } from 'react';
 import { Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn } from 'material-ui/Table';
 import Paper from 'material-ui/Paper';
 
-class UserTable extends Component {
+class EnvironmentTable extends Component {
 
   constructor(props) {
     super(props);
 
     this.state = {
-      data: props.users,
+      data: props.environment,
     };
   }
 
   componentWillReceiveProps(nextProps) {
     this.setState({
-      data: nextProps.users,
+      data: nextProps.environment,
     });
   }
 
@@ -24,18 +24,16 @@ class UserTable extends Component {
         <Table>
           <TableHeader displaySelectAll={false} adjustForCheckbox={false}>
             <TableRow>
-              <TableHeaderColumn>Id</TableHeaderColumn>
               <TableHeaderColumn>Name</TableHeaderColumn>
-              <TableHeaderColumn>E-Mail</TableHeaderColumn>
+              <TableHeaderColumn>Value</TableHeaderColumn>
             </TableRow>
           </TableHeader>
           <TableBody displayRowCheckbox={false}>
-            {this.state.data.map((user) => {
-              return(
-                <TableRow key={user['id']}>
-                  <TableRowColumn>{user['id']}</TableRowColumn>
-                  <TableRowColumn>{user['name']}</TableRowColumn>
-                  <TableRowColumn>{user['email']}</TableRowColumn>
+            {this.state.data.map((environment, index) => {
+              return (
+                <TableRow key={index}>
+                  <TableRowColumn>{environment['name']}</TableRowColumn>
+                  <TableRowColumn>{environment['value']}</TableRowColumn>
                 </TableRow>
               );
             })}
@@ -44,7 +42,7 @@ class UserTable extends Component {
       </Paper>
     );
   }
-  
+
 }
 
-export default UserTable;
+export default EnvironmentTable;

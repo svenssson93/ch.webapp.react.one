@@ -1,11 +1,34 @@
-const environment = {
-  production: false,
-  backendBase: 'http://localhost:8080',
-  backendApiUri: '/api/users',
+import React, { Component } from 'react';
+import { getEnvironment } from './environment.service.js';
+import EnvironmentTable from './EnvironmentTable.js';
 
-  trainsBase: 'https://api.deutschebahn.com',
-  trainsLocationsApiUri: '/freeplan/v1/location',
-  trainsLocationDashboard: 'Berlin'
-};
+class Environment extends Component {
 
-export default environment;
+  constructor() {
+    super();
+
+    this.state = {
+      environment: [],
+    };
+  }
+
+  componentWillMount() {
+    getEnvironment().then((value) => {
+      this.setState({
+        environment: value,
+      });
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Environments</h1>
+        <EnvironmentTable environment={this.state.environment} />
+      </div>
+    );
+  }
+
+}
+
+export default Environment;

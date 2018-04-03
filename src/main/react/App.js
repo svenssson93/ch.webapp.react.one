@@ -7,6 +7,7 @@ import { MyMenu } from './MyComponent.js';
 import Users from './Users.js';
 import About from './About.js';
 import Trains from './Trains.js';
+import Environment from './Environment.js';
 
 class App extends Component {
   render() {
@@ -24,6 +25,7 @@ class App extends Component {
               <Route exact path="/" component={About} />
               <Route path="/users" component={Users} />
               <Route path="/trains" component={Trains} />
+              <Route path="/environments" component={Environment} />
             </Switch>
           </div>
         </MuiThemeProvider>
