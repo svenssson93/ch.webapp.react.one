@@ -54,7 +54,8 @@ class Users extends Component {
 
   render() {
     let content = this.state.allUsers.map((user, index) => {
-      return <MenuItem key={index+1} value={user['id']} primaryText={user['name']} />;
+      let id = "selUser" + (index + 1);
+      return <MenuItem id={id} key={index+1} value={user['id']} primaryText={user['name']} />;
     });
     return (
       <div>
