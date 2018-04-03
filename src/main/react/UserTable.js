@@ -21,7 +21,7 @@ class UserTable extends Component {
   render() {
     return (
       <Paper>
-        <Table>
+        <Table className="tblUsers">
           <TableHeader displaySelectAll={false} adjustForCheckbox={false}>
             <TableRow>
               <TableHeaderColumn>Id</TableHeaderColumn>

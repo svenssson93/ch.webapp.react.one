@@ -58,8 +58,9 @@ class Users extends Component {
     });
     return (
       <div>
-        <h1>Users</h1>
+        <h1 className="pageTitle">Users</h1>
         <SelectField
+          id="selUser"
           floatingLabelText="Select User"
           floatingLabelStyle={style.floatingLabelStyle}
           inputStyle={style.inputStyle}

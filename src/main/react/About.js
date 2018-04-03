@@ -12,11 +12,11 @@ class About extends Component {
   render() {
     return (
       <Paper>
-        <h1 className="about">React</h1>
+        <h1 className="pageTitle about">React</h1>
         <strong>A JavaScript library for building user interfaces</strong>
         <br />
-        <RaisedButton label="Get Started" href={getStartedLink} target="_blank" style={btnStyle} />
-        <RaisedButton label="Take the Tutorial" href={tutorialLink} target="_blank" style={btnStyle} />
+        <RaisedButton id="btnGetStarted" label="Get Started" href={getStartedLink} target="_blank" style={btnStyle} />
+        <RaisedButton id="btnTutorial" label="Take the Tutorial" href={tutorialLink} target="_blank" style={btnStyle} />
       </Paper>
     );
   }

@@ -11,11 +11,11 @@ const style = {
 
 const MyMenu = () => (
   <div>
-    <Menu style={{width:'100%'}}>
-      <Link to="/users"><MenuItem primaryText="Users" style={style} /></Link>
-      <Link to="/"><MenuItem primaryText="About" style={style} /></Link>
-      <Link to="/trains"><MenuItem primaryText="Trains" style={style} /></Link>
-      <Link to="/environments"><MenuItem primaryText="Environments" style={style} /></Link>
+    <Menu id="navigation" style={{width:'100%'}}>
+      <Link id="userLink" to="/users"><MenuItem primaryText="Users" style={style} /></Link>
+      <Link id="aboutLink" to="/"><MenuItem primaryText="About" style={style} /></Link>
+      <Link id="trainLink" to="/trains"><MenuItem primaryText="Trains" style={style} /></Link>
+      <Link id="environmentLink" to="/environments"><MenuItem primaryText="Environments" style={style} /></Link>
     </Menu>
   </div>
 );

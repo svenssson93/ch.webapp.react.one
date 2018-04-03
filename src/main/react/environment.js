@@ -23,7 +23,7 @@ class Environment extends Component {
   render() {
     return (
       <div>
-        <h1>Environments</h1>
+        <h1 className="pageTitle">Environments</h1>
         <EnvironmentTable environment={this.state.environment} />
       </div>
     );

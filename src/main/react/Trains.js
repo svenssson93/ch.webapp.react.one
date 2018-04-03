@@ -49,7 +49,7 @@ class Trains extends Component {
     var dbUrl = "https://developer.deutschebahn.com/store/apis/info?name=Fahrplan-Free&version=v1&provider=DBOpenData#!/default/get_location_name";
     return (
       <div>
-        <h1>Train stations</h1>
+        <h1 className="pageTitle">Train stations</h1>
         <Paper>
           <div>
             <br />
@@ -59,8 +59,8 @@ class Trains extends Component {
             <a href={dbUrl} target="_blank" rel="noopener noreferrer">here</a>
             &nbsp;under the "API Console" Tab.
           </div>
-          <TextField hintText="Enter train location here" onChange={this._handleTextFieldChange} />
-          <RaisedButton label="Submit" style={btnStyle} onClick={this._handleButtonClick} />
+          <TextField id="txtLocation" hintText="Enter train location here" onChange={this._handleTextFieldChange} />
+          <RaisedButton id="btnLocationSubmit" label="Submit" style={btnStyle} onClick={this._handleButtonClick} />
           <TrainTable trains={this.state.trains} />
         </Paper>
       </div>

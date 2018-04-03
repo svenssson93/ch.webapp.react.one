@@ -21,7 +21,7 @@ class EnvironmentTable extends Component {
   render() {
     return (
       <Paper>
-        <Table>
+        <Table className="tblEnvironment">
           <TableHeader displaySelectAll={false} adjustForCheckbox={false}>
             <TableRow>
               <TableHeaderColumn>Name</TableHeaderColumn>

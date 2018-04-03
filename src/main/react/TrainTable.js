@@ -18,7 +18,7 @@ class TrainTable extends Component {
 
   render() {
     return (
-      <Table>
+      <Table className="tblTrains">
         <TableHeader displaySelectAll={false} adjustForCheckbox={false}>
           <TableRow>
             <TableHeaderColumn>Name</TableHeaderColumn>
