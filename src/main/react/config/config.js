@@ -7,7 +7,8 @@ const config = {
   backendBase: 'http://localhost:8080',
 
   // Users API
-  backendApiUri: '/api/users',
+  backendApiUriUsers: '/api/users',
+  // Environment API
   backendApiUriEnvironment: '/api/environment?sort=name&size=300',
 
   // Trains API DB
@@ -15,11 +16,9 @@ const config = {
   trainsLocationsApiUri: '/freeplan/v1/location',
   trainsLocationDashboard: 'Berlin',
 
-  // Deployment settings
-  deployment: {
-    repository: 'https://github.com/svenssson93/ch.webapp.react.one.git',
-    branch: 'master',
-  },
+  // Repository information
+  repository: 'https://github.com/svenssson93/ch.webapp.react.one.git',
+  branch: 'master',
 };
 
 export default config;
