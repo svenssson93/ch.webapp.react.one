@@ -21,4 +21,4 @@ trainsLocationsApiUri: Path to the Deutsche Bahn API.
 trainsLocationDashboard: Location to start the DB query with (e.g. Berlin, Hamburg, etc.).
 repository: GitHub-Repository URL.
 branch: Currently used branch.
-
+logLevel: Can be set to the following values to control logging-level. || OFF | INFO | DEBUG | ERROR ||
