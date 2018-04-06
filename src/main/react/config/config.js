@@ -19,6 +19,9 @@ const config = {
   // Repository information
   repository: 'https://github.com/svenssson93/ch.webapp.react.one.git',
   branch: 'master',
+
+  // Logging
+  logLevel: 'debug',
 };
 
 export default config;
