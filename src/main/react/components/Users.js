@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
-import { getUsers } from './users.service.js';
+import { getUsers } from '../services/users.service.js';
 import UserTable from './UserTable.js';
 import { isEqual } from 'lodash';
 

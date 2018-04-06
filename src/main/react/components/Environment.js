@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getEnvironment } from './environment.service.js';
+import { getEnvironment } from '../services/environment.service.js';
 import EnvironmentTable from './EnvironmentTable.js';
 
 class Environment extends Component {

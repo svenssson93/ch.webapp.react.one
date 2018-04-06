@@ -3,7 +3,7 @@ import Paper from 'material-ui/Paper';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import TrainTable from './TrainTable.js';
-import { getTrains } from './trains.service.js';
+import { getTrains } from '../services/trains.service.js';
 
 const btnStyle = {
   margin: 12,
