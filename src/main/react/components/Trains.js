@@ -25,7 +25,7 @@ class Trains extends Component {
   }
 
   componentWillMount() {
-    logger.info("Trains-Component mounting; calling train-service.")
+    logger.info("Trains-Component mounting; calling train-service.");
     this._callTrainService();
   }
 
@@ -36,7 +36,7 @@ class Trains extends Component {
   }
 
   _handleButtonClick(e) {
-    logger.info("Submit-Button clicked; calling train-service.")
+    logger.info("Submit-Button clicked; calling train-service.");
     this._callTrainService();
   }
 
