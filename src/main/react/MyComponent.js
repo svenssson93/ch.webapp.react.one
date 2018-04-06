@@ -7,15 +7,16 @@ const style = {
   display: 'inline-block',
   float: 'left',
   width: '25%',
+  textDecoration: 'none',
 };
 
 const MyMenu = () => (
   <div>
     <Menu id="navigation" style={{width:'100%'}}>
-      <Link id="userLink" to="/users"><MenuItem primaryText="Users" style={style} /></Link>
-      <Link id="aboutLink" to="/"><MenuItem primaryText="About" style={style} /></Link>
-      <Link id="trainLink" to="/trains"><MenuItem primaryText="Trains" style={style} /></Link>
-      <Link id="environmentLink" to="/environments"><MenuItem primaryText="Environments" style={style} /></Link>
+      <Link id="userLink" to="/users" style={style}><MenuItem primaryText="Users" /></Link>
+      <Link id="aboutLink" to="/" style={style}><MenuItem primaryText="About" /></Link>
+      <Link id="trainLink" to="/trains" style={style}><MenuItem primaryText="Trains" /></Link>
+      <Link id="environmentLink" to="/environments" style={style}><MenuItem primaryText="Environments" /></Link>
     </Menu>
   </div>
 );

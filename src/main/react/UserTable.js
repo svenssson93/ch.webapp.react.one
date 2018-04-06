@@ -29,7 +29,7 @@ class UserTable extends Component {
               <TableHeaderColumn>E-Mail</TableHeaderColumn>
             </TableRow>
           </TableHeader>
-          <TableBody displayRowCheckbox={false}>
+          <TableBody id="tblUser" displayRowCheckbox={false}>
             {this.state.data.map((user) => {
               return(
                 <TableRow key={user['id']}>

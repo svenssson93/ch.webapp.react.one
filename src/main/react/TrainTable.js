@@ -27,7 +27,7 @@ class TrainTable extends Component {
             <TableHeaderColumn>Latitude</TableHeaderColumn>
           </TableRow>
         </TableHeader>
-        <TableBody displayRowCheckbox={false}>
+        <TableBody id="tblTrain" displayRowCheckbox={false}>
             {this.state.data.map((train) => {
               return (
                 <TableRow key={train.id}>

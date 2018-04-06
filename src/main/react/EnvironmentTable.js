@@ -21,14 +21,14 @@ class EnvironmentTable extends Component {
   render() {
     return (
       <Paper>
-        <Table className="tblEnvironment">
+        <Table className="tblEnvironments">
           <TableHeader displaySelectAll={false} adjustForCheckbox={false}>
             <TableRow>
               <TableHeaderColumn>Name</TableHeaderColumn>
               <TableHeaderColumn>Value</TableHeaderColumn>
             </TableRow>
           </TableHeader>
-          <TableBody displayRowCheckbox={false}>
+          <TableBody id="tblEnvironment" displayRowCheckbox={false}>
             {this.state.data.map((environment, index) => {
               return (
                 <TableRow key={index}>
