@@ -4,6 +4,7 @@ import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import TrainTable from './TrainTable.js';
 import { getTrains } from '../services/trains.service.js';
+import logger from '../logger/logger.js';
 
 const btnStyle = {
   margin: 12,
@@ -24,6 +25,7 @@ class Trains extends Component {
   }
 
   componentWillMount() {
+    logger.info("Trains-Component mounting; calling train-service.")
     this._callTrainService();
   }
 
@@ -34,6 +36,7 @@ class Trains extends Component {
   }
 
   _handleButtonClick(e) {
+    logger.info("Submit-Button clicked; calling train-service.")
     this._callTrainService();
   }
 

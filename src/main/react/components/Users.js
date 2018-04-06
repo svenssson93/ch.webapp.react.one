@@ -4,6 +4,7 @@ import MenuItem from 'material-ui/MenuItem';
 import { getUsers } from '../services/users.service.js';
 import UserTable from './UserTable.js';
 import { isEqual } from 'lodash';
+import logger from '../logger/logger.js';
 
 const style = {
   floatingLabelStyle: {
@@ -25,6 +26,7 @@ class Users extends Component {
   }
 
   componentWillMount() {
+    logger.info("Users-Component mounting; calling getUsers()-service");
     getUsers().then((value) => {
       this.setState({
         users: value,
@@ -43,6 +45,7 @@ class Users extends Component {
         var elm = this.state.allUsers.find((element) => {
           return element.id === nextState['value'];
         });
+        logger.info("New user selected (" + elm['name'] + "). Updating table.");
         this.setState({
           users: [elm],
         });
