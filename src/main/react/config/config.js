@@ -21,7 +21,8 @@ const config = {
   branch: 'master',
 
   // Logging
-  logLevel: 'debug',
+  logDestination: 'console', // console | file
+  logLevel: 'ALL', // OFF | FATAL | ERROR | WARN | INFO | DEBUG | TRACE | ALL
 };
 
 export default config;

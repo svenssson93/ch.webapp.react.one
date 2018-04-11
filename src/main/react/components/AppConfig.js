@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn } from 'material-ui/Table';
 import Paper from 'material-ui/Paper';
-import Config from '../config/config.js';
+import config from '../config/config.js';
 
 class AppConfig extends Component {
 
@@ -26,7 +26,7 @@ class AppConfig extends Component {
               </TableRow>
             </TableHeader>
             <TableBody id="tblConfig" displayRowCheckbox={false}>
-              {Object.entries(Config).map(([key, value]) => {
+              {Object.entries(config).map(([key, value]) => {
                 return (
                   <TableRow key={key}>
                     <TableRowColumn>{key}</TableRowColumn>
