@@ -31,7 +31,7 @@ class EnvironmentTable extends Component {
           <TableBody id="tblEnvironment" displayRowCheckbox={false}>
             {this.state.data.map((environment, index) => {
               return (
-                <TableRow key={index}>
+                <TableRow className={environment['name']} key={index}>
                   <TableRowColumn>{environment['name']}</TableRowColumn>
                   <TableRowColumn>{environment['value']}</TableRowColumn>
                 </TableRow>
