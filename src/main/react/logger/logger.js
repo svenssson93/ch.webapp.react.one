@@ -1,6 +1,7 @@
 import config from '../config/config.js';
-import { configure, getLogger } from 'log4js';
 import * as Configuration from 'log4js/lib/configuration';
+
+const log4js = require('log4js');
 
 var appender;
 switch(config.logDestination) {
@@ -10,8 +11,11 @@ switch(config.logDestination) {
   case 'file':
     appender = require('log4js/lib/appenders/file');
     break;
+  /*case 'logstash':
+    appender = require('log4js-logstash');
+    break;*/
   default:
-    appender = require('log4js/lib/appenders/file');
+    appender = require('log4js/lib/appenders/console');
 }
 
 Configuration.prototype.loadAppenderModule = function(type) {
@@ -24,13 +28,24 @@ switch(config.logDestination) {
     appenderConfig = { console: { type: 'console', disableClustering: true }};
     break;
   case 'file':
-    appenderConfig = { file: { type: 'file', filename: 'app.log' }};
+    appenderConfig = { file: { type: 'file', filename: 'logs/app.log' }};
     break;
+  /*case 'logstash':
+    appenderConfig = { logstash: {
+      type: 'log4js-logstash',
+      host: config.logHost,
+      port: config.logPort,
+      fields: {
+        app: 'ReactApp',
+        environment: config.production ? 'production' : 'development',
+      },
+    }};
+    break;*/
   default:
     appenderConfig = { console: { type: 'console', disableClustering: true }};
 }
 
-configure({
+log4js.configure({
   appenders: appenderConfig,
   categories: {
     default: {
@@ -40,6 +55,6 @@ configure({
   },
 });
 
-var logger = getLogger(config.logDestination);
+const logger = log4js.getLogger();
 
 export default logger;
