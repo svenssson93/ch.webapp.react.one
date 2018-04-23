@@ -9,6 +9,7 @@ const getStartedLink = "https://reactjs.org/docs/hello-world.html";
 const tutorialLink = "https://reactjs.org/tutorial/tutorial.html";
 
 class About extends Component {
+
   render() {
     return (
       <Paper>
@@ -20,6 +21,7 @@ class About extends Component {
       </Paper>
     );
   }
+
 }
 
 export default About;

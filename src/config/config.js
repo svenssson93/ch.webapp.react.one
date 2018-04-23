@@ -21,8 +21,11 @@ const config = {
   branch: 'master',
 
   // Logging
-  logDestination: 'console', // console | file
+  logApi: 'api/logger',
+  logDestination: 'logstash', // console | file | logstash
   logLevel: 'ALL', // OFF | FATAL | ERROR | WARN | INFO | DEBUG | TRACE | ALL
+  logHost: 'localhost',
+  logPort: 5044,
 };
 
 export default config;

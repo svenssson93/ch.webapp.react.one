@@ -16,8 +16,9 @@ const style = {
 };
 
 class Users extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+
     this.state = {
       users: [],
       allUsers: [],
