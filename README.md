@@ -2,10 +2,10 @@
 
 To run this app, please run the following commands in the command line.
 
-1: npm install
-2: SET NODE_ENV=development
-3: npm start
-
+1: npm install  
+2: SET NODE_ENV=development  
+3: npm start  
+  
 To test the application run the following command.
 
 1: npm test
