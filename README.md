@@ -1,14 +1,21 @@
 # React Web-App
 
+## Install
+
 To run this app, please run the following commands in the command line.
 
 1: npm install  
 2: SET NODE_ENV=development  
 3: npm start  
-  
-To test the application run the following command.
 
-1: npm test
+## Test
+
+To test the application run the following commands in two separate command lines.
+
+1: npm start
+2: npm test
+
+## Configuration
 
 Config-file (./config.js) The following settings can be configured:  
 
