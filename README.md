@@ -12,7 +12,7 @@ To run this app, please run the following commands in the command line.
 
 To test the application run the following commands in two separate command lines.
 
-1: npm start
+1: npm start  
 2: npm test
 
 ## Configuration
